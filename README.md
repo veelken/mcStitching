@@ -23,6 +23,7 @@ In case you want to add a further QCD sample, e.g. for the pT^hat bin 20-30 GeV,
 In order to compute the stitching weights, add the following lines to your cfg.py file:
 
 process.load("HLTrigger.mcStitching.stitchingWeight_cfi")
+
 process.YOUR_CMS_SEQUENCE += process.stitchingWeight
 
 The module stitchingWeight computes a double for each event. Apply this double as an event weight when you process the minbias and QCD samples.
