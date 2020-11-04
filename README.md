@@ -27,6 +27,9 @@ process.load("HLTrigger.mcStitching.stitchingWeight_cfi")
 process.YOUR_CMS_SEQUENCE += process.stitchingWeight
 
 The module stitchingWeight computes a double for each event. Apply this double as an event weight when you process the minbias and QCD samples.
+Then simply process all minbias and QCD events and hadd the resulting histograms. In particular, do not apply any cuts on pT^hat when you process the minbias and QCD samples.
+The overlap in pT^hat between the minbias sample and the QCD samples is fully accounted for by the event weight.
+
 
 
 
